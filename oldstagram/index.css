@@ -1,0 +1,94 @@
+html, body {
+    padding: 0;
+    text-align: center;
+    width: 375px;
+    margin: 0 auto;
+}
+
+h3, p{
+    font-size: 13px;
+}
+
+nav{
+    width: 375px;
+    height: 65px;
+    display: flex;
+    justify-content: start;
+}
+
+nav img{
+   max-width: 100%;
+   max-height: 100%;
+   box-fit: contain;
+}
+
+#user-info-el{
+    margin: 0 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;;
+    
+}
+
+#user-info-el img{
+    margin-right: 7px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.name-location-el{
+    border: 1px solid black;
+    text-align: left;
+}
+
+.name-el{
+    font-size: 14px;
+    font-weight: 900;
+    margin-bottom: 0;
+}
+
+.location-el{
+    font-size: 12px;
+    margin-top: 0;
+    font-weight: 300;
+}
+
+#post-el img{
+    width: 375px;
+    height: 375px;
+}
+
+.icon{
+    display: flex;
+    justify-content: 
+}
+
+.icon-style{
+    width: 25px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 12px;
+    margin-left: 10px;
+}
+
+#like-counter-el{
+    margin-top: 0px;
+    margin-left: 13px;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.user-comment{
+    display: flex;
+    justify-content: start;
+    margin-top: 12px;
+    margin-left: 13px;
+    margin-bottom: 20px;
+}
+
+#username-el{
+    font-weight: 900;
+    margin-right: 10px;
+}
