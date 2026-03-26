@@ -35,9 +35,49 @@ const avatarImg = document.getElementById("avatar-img")
 const postImg = document.getElementById("post-img")
 const commentEl = document.getElementById("comment-el")
 const likeCounter = document.getElementById("like-counter-el")
+const heartBtn = document.getElementById("heart-btn")
+const dmBtn = document.getElementById("dm-btn")
+const prevBtn = document.getElementById("prev-btn")
+const nextBtn = document. getElementById("next-btn")
 
-function user(){
-    for (let i=0; i<posts.length; i++){
-        
+heartBtn.addEventListener("click", function() {
+    let count = parseInt(likeCounter.textContent)
+    count += 1
+    likeCounter.textContent = count + " likes"
+})
+
+function user() {
+
+        nameEl.textContent = posts[currentPost].name
+        usernameEl.textContent = posts[currentPost].username
+        locationEl.textContent = posts[currentPost].location
+        avatarImg.src = posts[currentPost].avatar
+        postImg.src = posts[currentPost].post
+        commentEl.textContent = posts[currentPost].comment
+        likeCounter.textContent = posts[currentPost].likes + " likes"
     }
-}
+
+let currentPost = 0
+
+nextBtn.addEventListener("click", function() {
+
+    if (currentPost === posts.length -1) {
+        currentPost = 0
+        user()
+    }
+    else {
+        currentPost += 1
+        user()
+    }
+})
+
+prevBtn.addEventListener("click", function() {
+    if (currentPost === 0){
+        currentPost = posts.length -1
+        user()
+    }
+    else {
+        currentPost -= 1
+        user()
+    }
+})

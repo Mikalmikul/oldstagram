@@ -3,6 +3,7 @@ html, body {
     text-align: center;
     width: 375px;
     margin: 0 auto;
+    font-family: "Source Sans 3", sans-serif;
 }
 
 h3, p{
@@ -19,7 +20,6 @@ nav{
 nav img{
    max-width: 100%;
    max-height: 100%;
-   box-fit: contain;
 }
 
 #user-info-el{
@@ -39,30 +39,66 @@ nav img{
 }
 
 .name-location-el{
-    border: 1px solid black;
     text-align: left;
 }
 
-.name-el{
+#name-el{
     font-size: 14px;
     font-weight: 900;
     margin-bottom: 0;
 }
 
-.location-el{
+#location-el{
     font-size: 12px;
     margin-top: 0;
     font-weight: 300;
 }
 
+#post-el{
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
 #post-el img{
-    width: 375px;
+    width: 100%;
     height: 375px;
+}
+
+#post-el button{
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    background: none;
+    border: none;
+    justify-content: space-between;
+}
+
+#prev-btn{
+    left: 5px;
+    opacity: 0%;
+
+}
+
+#next-btn{
+    right: 5px;
+    opacity: 0%;
+}
+
+#prev-btn:hover,
+#next-btn:hover {
+    transition: 0.5s;
+    opacity: 85%;
 }
 
 .icon{
     display: flex;
-    justify-content: 
+}
+
+#heart-btn:hover,
+#cmnt-btn:hover,
+#dm-btn:hover{
+    opacity: 50%;
 }
 
 .icon-style{
@@ -83,12 +119,16 @@ nav img{
 .user-comment{
     display: flex;
     justify-content: start;
-    margin-top: 12px;
+    margin-top: 0px;
     margin-left: 13px;
     margin-bottom: 20px;
 }
 
 #username-el{
     font-weight: 900;
-    margin-right: 10px;
+    margin-right: 5px;
+}
+
+#comment-el {
+    text-align: left;
 }
